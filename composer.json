@@ -1,10 +1,10 @@
 {
-  "name": "manshu/wordpress",
+  "name": "manshu/composer-wordpress",
   "description": "Basic template for creating a composer + wordpress sites",
   "authors": [
     {
       "name": "Matias Halles",
-      "email": "matias.halles@gmail.com"
+      "email": "matias.hal les@gmail.com"
     }
   ],
   "require": {
