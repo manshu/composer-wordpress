@@ -40,8 +40,8 @@
   },
   "extra" : {
     "installer-paths": {
-      "content/plugins/{$name}/": ["type:wordpress-plugin"],
-      "content/themes/{$name}/": ["type:wordpress-theme"]
+      "wp/plugins/{$name}/": ["type:wordpress-plugin"],
+      "wp/themes/{$name}/": ["type:wordpress-theme"]
     },
     "webroot-dir"     : "wp",
     "webroot-package" : "wordpress/wordpress",
