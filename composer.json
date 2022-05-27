@@ -1,0 +1,50 @@
+{
+  "name": "manshu/wordpress",
+  "description": "Basic template for creating a composer + wordpress sites",
+  "authors": [
+    {
+      "name": "Matias Halles",
+      "email": "matias.halles@gmail.com"
+    }
+  ],
+  "require": {
+    "wordpress/wordpress": "6.0"
+  },
+  "repositories":[
+      {
+        "type"    : "package",
+        "package" : {
+          "name"    : "wordpress/wordpress",
+          "type"    : "webroot",
+          "version" : "6.0",
+          "dist"    : {
+            "url"  : "https://github.com/WordPress/WordPress/archive/refs/tags/6.0.zip",
+            "type" : "zip"
+          },
+          "require" : {
+            "fancyguy/webroot-installer" : "^1.0"
+          }
+        }
+      }
+  ],
+  "autoload": {
+      "psr-0": {
+          "Acme": "src/"
+      }
+  },
+  "config"      : {
+      "vendor-dir": "vendor",
+    "allow-plugins": {
+      "fancyguy/webroot-installer": true
+    }
+  },
+  "extra" : {
+    "installer-paths": {
+      "content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "content/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "webroot-dir"     : "wp",
+    "webroot-package" : "wordpress/wordpress",
+    "wordpress-install-dir": "wp"
+  }
+}
